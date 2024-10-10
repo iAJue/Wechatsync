@@ -1,5 +1,5 @@
 import Sval from 'sval'
-import svalScopes from '@wechatsync/drivers/scopes'
+import svalScopes from '@wechatsync/drivers/scopes.js'
 import moment from 'moment'
 
 export function getSettings() {
@@ -10,7 +10,7 @@ export function getSettings() {
           try {
             var settings = JSON.parse(value.settings)
             resolve(settings)
-          } catch(e) {
+          } catch (e) {
             reject(e)
           }
         } else {
@@ -93,7 +93,7 @@ export function initializeDriver(conf = {}) {
       const driver = getDriverProvider(code)
       resolve(driver)
     }
-    chrome.storage.local.get(['driver'], function(result) {
+    chrome.storage.local.get(['driver'], function (result) {
       try {
         if (conf.beforeCreate) {
           conf.beforeCreate(result)
@@ -109,13 +109,13 @@ export function initializeDriver(conf = {}) {
 function setCache(name, value) {
   var d = {}
   d[name] = value
-  chrome.storage.local.set(d, function() {
+  chrome.storage.local.set(d, function () {
     console.log('cache set')
   })
 }
 
 function getCache(name, cb) {
-  chrome.storage.local.get(name, function(result) {
+  chrome.storage.local.get(name, function (result) {
     cb(result)
   })
 }
@@ -129,14 +129,14 @@ window.onmessage = e => {
     if (action.eventId && abb[action.eventId]) {
       abb[action.eventId](action.err, action.data)
     }
-  } catch (e) {}
+  } catch (e) { }
 }
 
 function requestFrameMethod(d, name) {
   return new Promise((resolve, reject) => {
     var evtId = Date.now() + Math.random()
     d.eventId = evtId
-    abb[evtId] = function(err, data) {
+    abb[evtId] = function (err, data) {
       if (err) {
         reject(err)
       } else {
@@ -178,7 +178,7 @@ function modifyRequestHeaders(ulrPrefix, headers, inspectUrls, handler) {
   }
   console.log('modifyRequestHeaders', ulrPrefix)
   chrome.webRequest.onBeforeSendHeaders.addListener(
-    function(details) {
+    function (details) {
       try {
         var macthedUrl = details.url.indexOf(ulrPrefix) > -1
         if (macthedUrl) {

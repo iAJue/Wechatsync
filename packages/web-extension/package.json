@@ -8,6 +8,7 @@
     "build": "webpack --env production",
     "prebuilt": "webpack --config ./scripts/webpack.packDriverCode.js && node ./scripts/stringifyCodePack.js"
   },
+  "type": "module",
   "author": "fun",
   "license": "ISC",
   "dependencies": {

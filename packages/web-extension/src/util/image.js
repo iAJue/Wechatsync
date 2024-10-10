@@ -1,5 +1,5 @@
 
-import { readFileToBase64 } from './file'
+import { readFileToBase64 } from './file.js'
 
 function getDataUrl(srcUrl, cb) {
   var canvas = document.createElement('canvas'),
@@ -72,7 +72,7 @@ export function upImage(driver, src, postId, name) {
           driver
             .uploadFile(uploadData)
             .then(
-              function(res, status, xhr) {
+              function (res, status, xhr) {
                 console.log(res)
                 if (status == 'success' || res) {
                   var object = res[0]
@@ -82,7 +82,7 @@ export function upImage(driver, src, postId, name) {
                   reject()
                 }
               },
-              function(xhr, status, error) {
+              function (xhr, status, error) {
                 console.log(arguments)
                 if (error) {
                   reject(error)
@@ -91,7 +91,7 @@ export function upImage(driver, src, postId, name) {
                 }
               }
             )
-            .catch(function(e) {
+            .catch(function (e) {
               console.log('uploadFile.catch', e)
               reject(e)
             })

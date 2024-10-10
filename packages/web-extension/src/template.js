@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueMoment from 'vue-moment'
-import { store } from './store/store'
+import { store } from './store/store.js'
 
 import Main from './tempalte/App.vue'
 

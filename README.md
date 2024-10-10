@@ -1,3 +1,8 @@
+> 阿珏: 先不说环境太老,这个不兼容那个报错的.搞得头都大了,太难了,项目很好,但我选择自己写一个.
+
+![](./snapshots/021fb4a27ff41083d1c6e550927078e9.png)
+
+
 # 文章同步助手
 
 ![](https://img.shields.io/github/v/release/wechatsync/Wechatsync.svg)
@@ -8,6 +13,7 @@
 为广大自媒体朋友撸了个提高生产力的小工具、可以做到的在多个内容平台无缝同步。
 
 ![](snapshots/wechatsync.png)
+
 
 [API文档](https://github.com/wechatsync/Wechatsync/blob/master/API.md)
 
@@ -23,29 +29,29 @@
 
 
 ## 支持渠道
-| 媒体           | 媒体行业  | 状态  | 网址                                | 支持类型          | 检查时间      |
-|--------------|-------|-----|-----------------------------------|---------------|-----------|
-| 微信公众号        | 主流自媒体 | 已支持 | https://mp.weixin.qq.com/         | HTML          | 2021/3/17 |
-| 知乎           | 主流自媒体 | 已支持 | https://www.zhihu.com/            | HTML          | 2021/3/17 |
-| 微博           | 主流自媒体 | 已支持 | https://weibo.com/                | HTML          | 2021/3/17 |
-| Bilibili     | 通用行业  | 已支持 | https://www.bilibili.com/         | HTML          | 2021/3/17 |
-| 豆瓣           | 通用行业  | 已支持 | https://www.douban.com/           | HTML          | 2021/3/17 |
-| 百家号          | 通用行业  | 已支持 | https://baijiahao.baidu.com/      |               | 2021/3/17 |
-| 简书           | 通用行业  | 已支持 | https://www.jianshu.com/          | HTML          | 2021/3/17 |
-| 头条号          | 通用行业  | 已支持 | https://mp.toutiao.com/           | HTML          | 2021/3/17 |
-| 搜狐号          | 通用行业  | 已支持 | https://mp.sohu.com/mpfe/v3/login |               | 2021/3/17 |
-| 大鱼号          | 通用行业  | 已支持 | https://mp.dayu.com/              |               | 2021/3/21 |
-| 一点资讯         | 通用行业  | 已支持 | https://www.yidianzixun.com/      | HTML          | 2021/3/18 |
-| Cnblog       | 技术社区  | 已支持 | https://www.cnblogs.com/          | Markdown,HTML | 2021/3/17 |
-| CSDN         | 技术社区  | 已支持 | https://www.csdn.net/             | Markdown,HTML | 2021/3/17 |
-| 51CTO        | 技术社区  | 已支持 | https://www.51cto.com/            | Markdown,HTML | 2021/3/17 |
-| Segmentfault | 技术社区  | 已支持 | https://segmentfault.com/         | Markdown,HTML | 2021/3/17 |
-| 掘金           | 技术社区  | 已支持 | https://juejin.cn/                | HTML,Markdown | 2021/3/17 |
-| 慕课网-手记       | 技术社区  | 已支持 | https://www.imooc.com/article     |               | 2021/3/21 |
-| 开源中国         | 技术社区  | 已支持 | https://my.oschina.net/           |               | 2021/3/18 |
-| Typecho      | 开源CMS | 已支持 | http://typecho.org/               | HTML          | 2021/3/17 |
-| WordPress    | 开源CMS | 已支持 | https://cn.wordpress.org/         | HTML          | 2021/3/17 |
-| 搜狐焦点         | 房地产   | 已支持 | https://house.focus.cn/           | HTML          | 2021/3/17 |
+| 媒体         | 媒体行业   | 状态   | 网址                              | 支持类型      | 检查时间  |
+| ------------ | ---------- | ------ | --------------------------------- | ------------- | --------- |
+| 微信公众号   | 主流自媒体 | 已支持 | https://mp.weixin.qq.com/         | HTML          | 2021/3/17 |
+| 知乎         | 主流自媒体 | 已支持 | https://www.zhihu.com/            | HTML          | 2021/3/17 |
+| 微博         | 主流自媒体 | 已支持 | https://weibo.com/                | HTML          | 2021/3/17 |
+| Bilibili     | 通用行业   | 已支持 | https://www.bilibili.com/         | HTML          | 2021/3/17 |
+| 豆瓣         | 通用行业   | 已支持 | https://www.douban.com/           | HTML          | 2021/3/17 |
+| 百家号       | 通用行业   | 已支持 | https://baijiahao.baidu.com/      |               | 2021/3/17 |
+| 简书         | 通用行业   | 已支持 | https://www.jianshu.com/          | HTML          | 2021/3/17 |
+| 头条号       | 通用行业   | 已支持 | https://mp.toutiao.com/           | HTML          | 2021/3/17 |
+| 搜狐号       | 通用行业   | 已支持 | https://mp.sohu.com/mpfe/v3/login |               | 2021/3/17 |
+| 大鱼号       | 通用行业   | 已支持 | https://mp.dayu.com/              |               | 2021/3/21 |
+| 一点资讯     | 通用行业   | 已支持 | https://www.yidianzixun.com/      | HTML          | 2021/3/18 |
+| Cnblog       | 技术社区   | 已支持 | https://www.cnblogs.com/          | Markdown,HTML | 2021/3/17 |
+| CSDN         | 技术社区   | 已支持 | https://www.csdn.net/             | Markdown,HTML | 2021/3/17 |
+| 51CTO        | 技术社区   | 已支持 | https://www.51cto.com/            | Markdown,HTML | 2021/3/17 |
+| Segmentfault | 技术社区   | 已支持 | https://segmentfault.com/         | Markdown,HTML | 2021/3/17 |
+| 掘金         | 技术社区   | 已支持 | https://juejin.cn/                | HTML,Markdown | 2021/3/17 |
+| 慕课网-手记  | 技术社区   | 已支持 | https://www.imooc.com/article     |               | 2021/3/21 |
+| 开源中国     | 技术社区   | 已支持 | https://my.oschina.net/           |               | 2021/3/18 |
+| Typecho      | 开源CMS    | 已支持 | http://typecho.org/               | HTML          | 2021/3/17 |
+| WordPress    | 开源CMS    | 已支持 | https://cn.wordpress.org/         | HTML          | 2021/3/17 |
+| 搜狐焦点     | 房地产     | 已支持 | https://house.focus.cn/           | HTML          | 2021/3/17 |
 
 - [待支持的平台列表](https://airtable.com/shrLSJMnTC2BlmP29)
 

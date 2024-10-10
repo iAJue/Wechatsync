@@ -1,16 +1,20 @@
-const path = require('path')
-const webpack = require('webpack')
-const { merge } = require('webpack-merge')
-const { VueLoaderPlugin } = require('vue-loader')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const Dotenv = require('dotenv-webpack')
-const TerserPlugin = require('terser-webpack-plugin')
-const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin')
-const ZipPlugin = require('zip-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+import path from 'path'
+import webpack from 'webpack'
+import { merge } from 'webpack-merge'
+import { VueLoaderPlugin } from 'vue-loader'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import Dotenv from 'dotenv-webpack'
+import TerserPlugin from 'terser-webpack-plugin'
+import IgnoreEmitPlugin from 'ignore-emit-webpack-plugin'
+import ZipPlugin from 'zip-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 const projectRoot = path.resolve(__dirname, '../../')
 
-const entry = (function() {
+const entry = (function () {
   const filesToPack = [
     'background.js',
     'popup.js',
@@ -27,7 +31,11 @@ const entry = (function() {
   ]
 
   function replaceSuffixes(file) {
-    return file.replace('scss', 'css')
+    // 只对 .scss 文件进行替换，其他文件保持原样
+    if (file.endsWith('.scss')) {
+      return file.replace('.scss', '.css');
+    }
+    return file;
   }
 
   return filesToPack.reduce(
@@ -39,7 +47,7 @@ const entry = (function() {
   )
 })()
 
-module.exports = env => {
+export default env => {
   const prodMode = env.production
   const prodConfigs = {
     mode: 'production',
@@ -61,7 +69,7 @@ module.exports = env => {
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: '"production"',
-          WECHAT_ENV: '"production"'
+          WECHAT_ENV: '"production"',
         },
       }),
       new ZipPlugin({
@@ -70,6 +78,7 @@ module.exports = env => {
       }),
     ],
   }
+
   const devConfigs = {
     mode: 'development',
     devtool: 'inline-source-map',

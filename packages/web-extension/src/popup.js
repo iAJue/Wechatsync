@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueMoment from 'vue-moment'
-import { store } from './store/store'
+import { store } from './store/store.js'
 import EntryView from './views/EntryView.vue'
 import Option from './views/Option.vue'
 import AddAccount from './views/AddAccount.vue'
